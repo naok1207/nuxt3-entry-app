@@ -68,3 +68,6 @@ devbox services start
 or
 make up
 ```
+
+## 参考
+[Nuxt 3 で Vuetify 3 を使う](https://zenn.dev/coedo/articles/nuxt3-vuetify3)
