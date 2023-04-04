@@ -3,6 +3,7 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { defaults } from '~/helpters/defaults'
 import { MAIN_THEME, mainTheme, mainDarkTheme } from '~/helpters/themes'
+import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 
 export default defineNuxtPlugin(nuxtApp => {
   const vuetify = createVuetify({
@@ -12,6 +13,14 @@ export default defineNuxtPlugin(nuxtApp => {
     defaults,
     display: {
       mobileBreakpoint: 'sm',
+    },
+    // add icons
+    icons: {
+      defaultSet: 'mdi',
+      aliases,
+      sets: {
+        mdi,
+      },
     },
     // add theme
     theme: {
