@@ -40,3 +40,31 @@ npm run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## postgres setup
+
+Open devbox shell
+
+```
+devbox shell
+```
+
+Setup Postgres in shell & Set Password `postgres`
+
+```
+initdb -U postgres -W
+```
+
+Set env variables `DATABASE_URL`
+
+```
+DATABASE_URL="postgresql://postgres:password@localhost:5432/postgres?schema=public"
+```
+
+Start postgres server
+
+```
+devbox services start
+or
+make up
+```
