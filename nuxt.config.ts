@@ -2,6 +2,9 @@
 import vuetify from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
+  modules: [
+    ['nuxt-graphql-server', {}]
+  ],
   build: {
     transpile: ['vuetify'],
   },
@@ -19,4 +22,7 @@ export default defineNuxtConfig({
     },
   },
   css: ['@/assets/main.scss'],
+  graphqlServer: {
+    url: '/api/graphql',
+  },
 })
